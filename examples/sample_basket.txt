@@ -1,0 +1,5 @@
+# One product query or product id per line (# comments ignored)
+# Prefer specific titles so resolve picks the intended SKU.
+COCA-COLA Original Taste 1lt
+COCA-COLA Zero Χωρίς ζάχαρη 1,5lt
+ACTIVIA Επιδόρπιο Γιαουρτιού

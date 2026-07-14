@@ -18,9 +18,7 @@ python3 -m posokanei exercise --json 2>&1 | tee -a "$SCRATCH/api-map-exercise.lo
 
 echo "=== basket compare ===" | tee "$SCRATCH/basket-compare.out"
 python3 -m posokanei basket \
-  "COCA-COLA Original Taste 1lt" \
-  "γάλα" \
-  "ψωμί" \
+  -f "$ROOT/examples/sample_basket.txt" \
   -v 2>&1 | tee -a "$SCRATCH/basket-compare.out"
 
 echo "=== availability ===" | tee -a "$SCRATCH/basket-compare.out"

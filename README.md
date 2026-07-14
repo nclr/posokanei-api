@@ -69,6 +69,9 @@ Full documentation of discovered endpoints:
 
 - [docs/API_MAP.md](docs/API_MAP.md)
 - [docs/api_map.json](docs/api_map.json) (machine-readable)
+- [docs/DISCOVERY.md](docs/DISCOVERY.md) (how endpoints were found; coverage limits)
+
+Example multi-product file: [examples/sample_basket.txt](examples/sample_basket.txt).
 
 Core operations:
 

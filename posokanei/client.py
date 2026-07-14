@@ -280,6 +280,22 @@ class PosoKaneiClient:
             q["retailer"] = retailer
         return self.get(f"/products/{product_id}/competitors", **q)
 
+    def product_image_url(self, product_id: str, version: Optional[str] = None) -> str:
+        """Absolute URL for GET /images/product/{id}."""
+        url = f"{self.base_url}/images/product/{product_id}"
+        if version:
+            url += f"?v={urllib.parse.quote(str(version))}"
+        return url
+
+    def retailer_logo_url(self, retailer_id: str) -> str:
+        return f"{self.base_url}/images/retailer/{retailer_id}"
+
+    def category_image_url(self, category_id: str, version: Optional[str] = None) -> str:
+        url = f"{self.base_url}/images/category/{category_id}"
+        if version:
+            url += f"?v={urllib.parse.quote(str(version))}"
+        return url
+
     def resolve_products(
         self,
         queries: Sequence[str],

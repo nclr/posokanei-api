@@ -1,0 +1,141 @@
+{
+  "base_url": "https://api.posokanei.gov.gr",
+  "frontend_url": "https://posokanei.gov.gr",
+  "discovery": {
+    "date": "2026-07-14",
+    "method": "Flutter main.dart.js reverse-engineering + live proxy exercise",
+    "frontend_version": "1.1.10",
+    "egress": "kepik egress-proxy (Greek IP required; direct often 403)"
+  },
+  "endpoints": [
+    {
+      "id": "meta_stats",
+      "method": "GET",
+      "path": "/meta/stats",
+      "query": {},
+      "returns": "Catalog stats and retailer id list"
+    },
+    {
+      "id": "meta_retailers",
+      "method": "GET",
+      "path": "/meta/retailers",
+      "query": { "countries": "GR" },
+      "returns": "Retailer objects with id, name, country, logo_url, website"
+    },
+    {
+      "id": "meta_categories",
+      "method": "GET",
+      "path": "/meta/categories",
+      "query": {},
+      "returns": "Flat category list with product_count"
+    },
+    {
+      "id": "meta_categories_tree",
+      "method": "GET",
+      "path": "/meta/categories/tree",
+      "query": { "include_counts": "true", "include_hidden": "false" },
+      "returns": "Nested category tree with VAT metadata"
+    },
+    {
+      "id": "products_list",
+      "method": "GET",
+      "path": "/products",
+      "query": {
+        "page": 1,
+        "page_size": 20,
+        "sort_by": "name",
+        "sort_order": "asc",
+        "category": "<optional category_id>",
+        "countries": "GR",
+        "is_international": "optional bool string"
+      },
+      "returns": "Paginated products with retailer_prices"
+    },
+    {
+      "id": "products_search",
+      "method": "POST",
+      "path": "/products/search",
+      "body": {
+        "page": 1,
+        "page_size": 20,
+        "sort_by": "name",
+        "sort_order": "asc",
+        "title": "optional search text",
+        "ids": "optional product id array"
+      },
+      "returns": "Paginated products with retailer_prices"
+    },
+    {
+      "id": "product_detail",
+      "method": "GET",
+      "path": "/products/{id}",
+      "query": {
+        "countries": "GR",
+        "include_tax": "true",
+        "sort_retailers": "asc",
+        "include_history": "optional true",
+        "price_type": "optional unit_price"
+      },
+      "returns": "Product detail + prices; optional history.daily_prices"
+    },
+    {
+      "id": "product_barcode",
+      "method": "GET",
+      "path": "/products/barcode/{barcode}",
+      "query": { "countries": "GR", "include_tax": "true" },
+      "returns": "Product detail; rate-limited (429)",
+      "notes": "Barcode formats: 8, 12, or 13 digits"
+    },
+    {
+      "id": "product_competitors",
+      "method": "GET",
+      "path": "/products/{id}/competitors",
+      "query": { "include_tax": "true", "retailer": "optional retailer id" },
+      "returns": "Competitor products in same category with prices"
+    },
+    {
+      "id": "image_product",
+      "method": "GET",
+      "path": "/images/product/{id}",
+      "returns": "Image bytes"
+    },
+    {
+      "id": "image_category",
+      "method": "GET",
+      "path": "/images/category/{id}",
+      "returns": "Image bytes"
+    },
+    {
+      "id": "image_retailer",
+      "method": "GET",
+      "path": "/images/retailer/{retailer_id}",
+      "returns": "Logo bytes"
+    },
+    {
+      "id": "forms_contact",
+      "method": "POST",
+      "path": "/forms/contact",
+      "returns": "Form submission result",
+      "notes": "Web contact form; not used for pricing"
+    },
+    {
+      "id": "forms_suggest_link",
+      "method": "POST",
+      "path": "/forms/suggest-link",
+      "returns": "Form submission result",
+      "notes": "Web suggest-link form; not used for pricing"
+    }
+  ],
+  "greek_retailer_ids": [
+    "ab_vasilopoulos",
+    "galaxias",
+    "sklavenitis",
+    "mymarket",
+    "masoutis",
+    "kritikos",
+    "halkiadakis",
+    "market_in",
+    "lidl",
+    "synka"
+  ]
+}

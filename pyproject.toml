@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "posokanei"
+version = "0.1.0"
+description = "Client and basket helpers for the public posokanei.gov.gr price comparison API"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "nclr / ai agents" }]
+keywords = ["posokanei", "greece", "supermarket", "prices", "api"]
+dependencies = []
+
+[project.optional-dependencies]
+dev = []
+
+[project.scripts]
+posokanei = "posokanei.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["posokanei*"]
+
+[tool.setuptools.package-data]
+posokanei = ["py.typed"]

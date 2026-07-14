@@ -1,5 +1,20 @@
-Flutter web canvas UI on posokanei.gov.gr:
-- Accessibility disabled by default (flt-semantics-placeholder "Enable accessibility" is outside viewport).
-- DOM body text often only the document title (~39 chars) without semantics.
-- Headless keyboard focus into search is unreliable; category browse and lists worked better.
-- Worked around via Playwright + pixel blue-button detection for cookie Accept and coordinate header nav.
+Flutter web (posokanei.gov.gr) automation limits — 2026-07-14
+
+1. Accessibility is off by default (flt-semantics-placeholder "Enable accessibility"
+   is outside the viewport; force-click fails). DOM body text is essentially empty.
+
+2. Cookie Accept works via pixel blue-button detection (reliable).
+
+3. Onboarding → home works with Παράλειψη + bottom next; home screenshots >150KB.
+
+4. Usage-guide dismiss: click left of bottom blue "Ναι, θέλω!" for "Όχι, ευχαριστώ".
+
+5. Category browse → product list → product multi-chain prices works with coordinate clicks.
+
+6. Desktop header search often does NOT receive keyboard focus in headless Chromium.
+   Mobile (390x844) search field DOES work (results "Αποτελέσματα για …").
+
+7. "Ιστορικό Τιμής" button is visible on product detail but chart UI was not opened
+   (clicks no-op in headless for that control). Marked unobserved, not timed.
+
+8. Success rule for this audit: unique screenshot MD5 + visual match to claimed state.

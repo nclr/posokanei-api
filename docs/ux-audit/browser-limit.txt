@@ -1,0 +1,5 @@
+Flutter web canvas UI on posokanei.gov.gr:
+- Accessibility disabled by default (flt-semantics-placeholder "Enable accessibility" is outside viewport).
+- DOM body text often only the document title (~39 chars) without semantics.
+- Headless keyboard focus into search is unreliable; category browse and lists worked better.
+- Worked around via Playwright + pixel blue-button detection for cookie Accept and coordinate header nav.

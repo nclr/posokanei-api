@@ -1,0 +1,104 @@
+[
+  {
+    "task_id": "T0_cold_load",
+    "seconds": 16.71,
+    "evidence": "F00_cold.png",
+    "viewport": "1280x800"
+  },
+  {
+    "task_id": "T_cookie_banner",
+    "seconds": 2.18,
+    "evidence": "C_cookie.png"
+  },
+  {
+    "task_id": "T_onboarding_skip",
+    "seconds": 10.6,
+    "evidence": "C_after_skip.png"
+  },
+  {
+    "task_id": "T_guided_tour_dismiss",
+    "seconds": 11.51,
+    "evidence": "C_tour_done.png"
+  },
+  {
+    "task_id": "T1_search_product",
+    "seconds": 9.54,
+    "query": "γάλα",
+    "evidence": "F04_search_gala.png",
+    "start": "click search field",
+    "end": "results settled 5s"
+  },
+  {
+    "task_id": "T2_product_price_by_chain",
+    "seconds": 7.71,
+    "evidence": "F05_product.png",
+    "start": "click first result",
+    "end": "detail+scroll settled"
+  },
+  {
+    "task_id": "T3_price_history",
+    "seconds": 9.69,
+    "evidence": "F06_history.png"
+  },
+  {
+    "task_id": "T4_competitors_cheaper",
+    "seconds": 6.57,
+    "evidence": "F07_competitors.png"
+  },
+  {
+    "task_id": "T5_browse_categories",
+    "seconds": 31.5,
+    "evidence": "F09_cat_250.png"
+  },
+  {
+    "task_id": "T6_shopping_list_create",
+    "seconds": 9.11,
+    "evidence": "F12_list_created.png",
+    "start": "click Λίστες",
+    "end": "list dialog settled"
+  },
+  {
+    "task_id": "T7_about_faq",
+    "seconds": 5.35,
+    "evidence": "F14_faq.png"
+  },
+  {
+    "task_id": "T8_contact_form",
+    "seconds": 4.27,
+    "evidence": "F15_contact.png"
+  },
+  {
+    "task_id": "T9_mobile_ready_home",
+    "seconds": 24.2,
+    "viewport": "390x844",
+    "evidence": "M02_home.png"
+  },
+  {
+    "task_id": "T10_mobile_search",
+    "seconds": 6.73,
+    "query": "coca cola",
+    "evidence": "M03_search.png"
+  },
+  {
+    "task_id": "T11_mobile_product_prices",
+    "seconds": 6.3,
+    "evidence": "M04_product.png"
+  },
+  {
+    "task_id": "T12_mobile_lists",
+    "seconds": 6.87,
+    "evidence": "M05_lists.png"
+  },
+  {
+    "task_id": "T13_warm_search",
+    "seconds": 37.48,
+    "query": "ρύζι 1kg",
+    "evidence": "W01_search.png",
+    "cold": false
+  },
+  {
+    "task_id": "T14_direct_no_proxy",
+    "seconds": 20.04,
+    "error": "Page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://posokanei.gov.gr/\", waiting until \"domcontentloaded\"\n"
+  }
+]

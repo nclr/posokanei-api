@@ -106,3 +106,7 @@ Grok skill for future agents: `~/.grok/skills/posokanei-api/SKILL.md` (mirrored 
 ## License
 
 MIT — API data belongs to the Greek public PosoKanei service; use responsibly and respect rate limits.
+
+## UX task map & flaw audit
+
+See [docs/ux-audit/UX_TASK_MAP_AND_FLAWS.md](docs/ux-audit/UX_TASK_MAP_AND_FLAWS.md) for observed user tasks, measured times (via Greek egress + Playwright), and UI/UX flaw inventory.
